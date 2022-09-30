@@ -7,5 +7,5 @@ This is my repository where all my LAB projects will appear!
 
 | Projects | Info |
 | ------ | ------ |
-| Lab 1 | GIT |
+| [Lab 1](https://github.com/boysangurkha/DEV5-myportfolio/tree/main/LAB1) | GIT |
 | Lab 2 | ES6 |
