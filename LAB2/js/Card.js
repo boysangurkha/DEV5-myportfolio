@@ -14,8 +14,8 @@ export default class Card {
     console.log(target);
     // hint: use class .bingo__card--done
     target.classList.toggle("bingo__card--done");
-    let cards = document.querySelectorAll(".bingo__card--done");
-    if (cards.length > 5) {
+    let tooManyCards = document.querySelectorAll(".bingo__card--done");
+    if (tooManyCards.length > 5) {
         target.classList.remove("bingo__card--done");
     }
   }
