@@ -1,3 +1,5 @@
+import Anime from "./Anime.js";
+
 export default class Weather{
     constructor(api_key){
         this.apiKey = api_key;
@@ -37,5 +39,6 @@ export default class Weather{
 
         const weather = data.data[0].city_name;
         document.querySelector(".weather__city").innerText = weather;
+        const anime = new Anime(temp);
     }
 }
