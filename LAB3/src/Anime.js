@@ -31,7 +31,12 @@ export default class Anime{
     }
 
     displayQuotes(data){
-        const animeQuote = data[0].quote;
+        const animeQuote = data[1].quote;
         console.log(animeQuote);
+        // create li element
+        const li = document.createElement("p");
+        li.src = animeQuote;
+        // append li to quotes
+        document.querySelector(".quotes").appendChild(li);
     }
 }
