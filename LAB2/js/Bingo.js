@@ -108,7 +108,6 @@ export default class Bingo {
         localStorage.removeItem("bingo");
         console.log("removed localstorage");
     }
-
   }
 
   static load() {
