@@ -25,7 +25,14 @@ export default class Anime{
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
+                //console.log(data);
+                this.displayQuotes(data);
             });
+    }
+
+    displayQuotes(data){
+        const animeQuote = data[0].quote;
+        console.log(animeQuote);
+        document.querySelector(".anime__quote").innerText = animeQuote;
     }
 }
