@@ -21,6 +21,11 @@ export default class Anime{
     }
 
     getQuotes(character){
-        console.log(character);
+        const url = `https://animechan.vercel.app/api/quotes/character?name=${character}`;
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+            });
     }
 }
