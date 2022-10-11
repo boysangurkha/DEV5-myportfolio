@@ -33,6 +33,5 @@ export default class Anime{
     displayQuotes(data){
         const animeQuote = data[0].quote;
         console.log(animeQuote);
-        document.querySelector(".anime__quote").innerText = animeQuote;
     }
 }
