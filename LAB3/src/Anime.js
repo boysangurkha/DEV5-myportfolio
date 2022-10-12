@@ -17,6 +17,9 @@ export default class Anime{
         }else if(this.temp <= 25 && this.temp > 20){
             let character = "luffy";
             this.getQuotes(character);
+        }else if(this.temp <= 5 && this.temp > 0){
+            let character = "eren";
+            this.getQuotes(character);
         }
     }
 
@@ -25,18 +28,20 @@ export default class Anime{
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                //console.log(data);
+                console.log(data);
                 this.displayQuotes(data);
             });
     }
 
     displayQuotes(data){
-        const animeQuote = data[1].quote;
+        //give me a random quote 
+        let randomQuote = Math.floor(Math.random() * data.length);
+        let animeQuote = data[randomQuote].quote;
         console.log(animeQuote);
-        // create li element
-        const li = document.createElement("p");
-        li.src = animeQuote;
-        // append li to quotes
-        document.querySelector(".quotes").appendChild(li);
+        
+        let p = document.createElement("p");
+        p.innerText = animeQuote;
+        p.classList.add("anime__quote");
+        document.querySelector(".quote").appendChild(p);
     }
 }
