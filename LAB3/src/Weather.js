@@ -38,5 +38,6 @@ export default class Weather{
         const temp = data.data[0].app_temp;
         document.querySelector(".weather__temp").innerText = "The temperature is " + temp + "°C" + " in " + city;
         const anime = new Anime(temp);
+        
     }
 }
