@@ -34,11 +34,9 @@ export default class Weather{
     }
 
     displayWeather(data){
+        const city = data.data[0].city_name;
         const temp = data.data[0].app_temp;
-        document.querySelector(".weather__temp").innerText = temp + "°C";
-
-        const weather = data.data[0].city_name;
-        document.querySelector(".weather__city").innerText = weather;
+        document.querySelector(".weather__temp").innerText = "The temperature is " + temp + "°C" + " in " + city;
         const anime = new Anime(temp);
     }
 }
