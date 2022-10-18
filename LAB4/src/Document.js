@@ -8,9 +8,11 @@ export class Document{
         this.renderer.setSize( window.innerWidth, window.innerHeight );
         document.body.appendChild( this.renderer.domElement );    
         
-        this.camera.position.z = 5;
-        this.camera.position.y = 2;
-        this.camera.position.x = 2;
+        this.camera.position.z = 50;
+        this.camera.position.y = 50;
+        this.camera.position.x = 50;
     }
 }
+
+
 

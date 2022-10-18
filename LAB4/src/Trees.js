@@ -20,8 +20,8 @@ export class Trees {
 
     addRandomTrees() {
         for(let i = 0; i < 60; i++) {
-            const x = Math.random() * 80 - 40;
-            const z = Math.random() * 80 - 40;
+            const x = Math.random() * 200 - 100;
+            const z = Math.random() * 200 - 100;
             this.addTrees(x, z);
         }
     }

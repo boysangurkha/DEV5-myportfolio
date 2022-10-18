@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { Trees } from './Trees.js';
+import { Aliens } from './Alien.js';
 
 export class House {
     constructor(scene) {
@@ -91,11 +92,11 @@ export class House {
         this.roof.position.set(-1.5, 0.65, -1);
 
 
-        this.grassTexture = this.textureLoader.load('../assets/grass.jpg');
+        this.grassTexture = this.textureLoader.load('../assets/mars.jpg');
         this.grassMaterial = new THREE.MeshStandardMaterial({color: "white"});
         this.grassMaterial.map = this.grassTexture;
         this.grassMaterial.side = THREE.DoubleSide;
-        this.grassGeometry = new THREE.PlaneGeometry(100, 100);
+        this.grassGeometry = new THREE.PlaneGeometry(500, 500);
         this.grass = new THREE.Mesh(this.grassGeometry, this.grassMaterial);
         this.grass.rotation.x = -Math.PI / 2;
         this.grass.position.y = -0.65;
@@ -111,6 +112,8 @@ export class House {
         this.group.add(this.cilinder);
         this.group.add(this.grass);
         this.tree = new Trees(this.group);
+        this.alien = new Aliens(this.group);
+        this.group.add(this.alien);
         this.group.add(this.tree);
         this.scene.add(this.group);
         this.rotate();
