@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-
+import { Trees } from './Trees.js';
 
 export class House {
     constructor(scene) {
@@ -110,8 +110,17 @@ export class House {
         this.group.add(this.photo);
         this.group.add(this.cilinder);
         this.group.add(this.grass);
-
+        this.tree = new Trees(this.group);
+        this.group.add(this.tree);
         this.scene.add(this.group);
+        this.rotate();
     }
+
+    rotate() {
+        this.group.rotation.y += 0.01;
+    }
+
+    
 }
+
 
