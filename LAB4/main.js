@@ -19,7 +19,7 @@ const house = new House(scene);
 function animate() {
   requestAnimationFrame( animate );
   //rotate house
-  house.group.rotation.y += 0.01;
+  //house.group.rotation.y += 0.01;
 
   renderer.render( scene, camera );
 };
