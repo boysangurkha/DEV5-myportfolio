@@ -9,7 +9,7 @@ export class Trees {
     
     addTrees(x,z) {
         const loader = new GLTFLoader();
-        loader.load('../public/tree.glb', (gltf) => {
+        loader.load('./tree.glb', (gltf) => {
         const tree = gltf.scene;
         this.scene.add(tree);
         //scale and position the model

@@ -12,7 +12,7 @@ export class House {
         this.houseMaterial = new THREE.MeshLambertMaterial( { color: 0xFFF8DC } );
         this.house = new THREE.Mesh( this.houseGeometry, this.houseMaterial );
 
-        this.doorTexture = this.textureLoader.load('../public/door2.jpg');
+        this.doorTexture = this.textureLoader.load('./door2.jpg');
 
         this.doorGeometry = new THREE.BoxGeometry(0.4, 0.8, 0.1);
         this.doorMaterial = new THREE.MeshStandardMaterial( { color: 0xffffff } );
@@ -37,7 +37,7 @@ export class House {
         this.balk.position.y = 0.2;
         this.balk.position.x = 0.515;
 
-        this.windowTexture = this.textureLoader.load('../public/window.jpg');
+        this.windowTexture = this.textureLoader.load('./window.jpg');
 
         this.windowGeometry = new THREE.BoxGeometry(0.8, 0.5, 0.1);
         this.windowMaterial = new THREE.MeshLambertMaterial( { color: 0x87CEFA } );
@@ -48,7 +48,7 @@ export class House {
         this.window.position.y = 0;
         this.window.position.x = -0.7;
 
-        this.photoTexture = this.textureLoader.load('../public/boy.jpg');
+        this.photoTexture = this.textureLoader.load('./boy.jpg');
         this.photoGeometry = new THREE.BoxGeometry(1, 1, 0.1);
         this.photoMaterial = new THREE.MeshLambertMaterial( { color: 0xffffff} );
         this.photoMaterial.map = this.photoTexture;
@@ -84,7 +84,7 @@ export class House {
         ]);
         this.geom.computeVertexNormals();
 
-        this.roofTexture = this.textureLoader.load('../public/roof2.jpg');
+        this.roofTexture = this.textureLoader.load('./roof2.jpg');
         this.roofMaterial = new THREE.MeshStandardMaterial({color: "white", flatShading: true});
         this.roofMaterial.map = this.roofTexture;
         this.roofMaterial.side = THREE.DoubleSide;
@@ -92,7 +92,7 @@ export class House {
         this.roof.position.set(-1.5, 0.65, -1);
 
 
-        this.grassTexture = this.textureLoader.load('../public/mars.jpg');
+        this.grassTexture = this.textureLoader.load('./mars.jpg');
         this.grassMaterial = new THREE.MeshStandardMaterial({color: "white"});
         this.grassMaterial.map = this.grassTexture;
         this.grassMaterial.side = THREE.DoubleSide;
