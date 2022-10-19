@@ -9,7 +9,7 @@ export class Aliens {
     
     addAliens(x,z,a) {
         const loader = new GLTFLoader();
-        loader.load('../assets/alien.glb', (gltf) => {
+        loader.load('../public/alien.glb', (gltf) => {
         const alien = gltf.scene;
         this.scene.add(alien);
         //scale and position the model
