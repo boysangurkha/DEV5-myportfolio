@@ -31,6 +31,17 @@ function zoomIn() {
   }
 }
 
+let rotate = true;
+function rotateHouse() {
+  if(zoom == true){
+    rotate = true;
+  }
+  else{
+    rotate = false;
+    house.rotate();
+  }
+}
+
 
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -49,6 +60,7 @@ controls.maxPolarAngle = Math.PI / 2;
 function animate() {
   requestAnimationFrame( animate );
   zoomIn();
+  rotateHouse();
   renderer.render( scene, camera );
 };
 

@@ -120,7 +120,7 @@ export class House {
     }
 
     rotate() {
-        this.group.rotation.y += 0.01;
+        this.group.rotation.y += 0.003;
     }
 
     
