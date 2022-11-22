@@ -2,6 +2,7 @@
 
   import VideoPlayer from './components/VideoPlayer.vue'
   import VideoDetails from './components/VideoDetails.vue'
+  import Chat from './components/Chat.vue'
 
 </script>
 
@@ -9,6 +10,7 @@
   <div class="app">
     <VideoPlayer />
     <VideoDetails />
+    <Chat />
   </div>
 </template>
 
