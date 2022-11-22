@@ -18,5 +18,6 @@
   .app {
     display: grid;
     grid-template-columns: 8fr 4fr;
+    font-family: "Lato", sans-serif;
   }
 </style>

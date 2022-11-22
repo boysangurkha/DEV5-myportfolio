@@ -64,4 +64,40 @@
         flex-direction: column;
         margin-top: 40px;
     }
+    h2 {
+        font-size: 0.9em;
+        font-weight: 900;
+    }
+    p {
+        color: black;
+        font-size: 0.8em;
+        margin-top: -10px;
+    }
+    .container{
+        background-color: rgb(237, 237, 237);
+        padding: 0px 1rem;
+    }
+
+    .input{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        padding: 0px 1rem;
+        width: 100%;
+    }
+    input{
+        border: none;
+        border-radius: 50px;
+        background-color: rgb(237, 237, 237);
+        padding: 6px 0px 6px 9px;
+    }
+    input::placeholder {
+        color: rgb(150, 150, 150);
+        font-size: 0.8em;
+    }
+    button{
+        color: rgb(150, 150, 150);
+        border: none;
+        background-color: rgb(255, 255, 255);
+    }
 </style>
