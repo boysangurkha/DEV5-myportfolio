@@ -14,13 +14,16 @@
                 for (let i = 0; i < data.length; i++) {
                     if (data[i].user == username.value) {
                         texts.push(data[i].text);
-                        console.log(data[i].text);
-                        console.log(username.value);
                     }
                 }
             })
     });
 
+
+    let comment = "";
+    const addText = () => {
+        texts.push(comment);
+    }
 
 
 
@@ -32,6 +35,10 @@
         <div class="container" v-for="text in texts" :key="text">
             <h2>{{ username }}</h2>
             <p>{{ text }}</p>
+        </div>
+        <div class="input">
+            <input type="text" v-model="comment" placeholder="Add comment..."> 
+            <button @click="addText">Post</button>
         </div>
     </div>
 </template>
