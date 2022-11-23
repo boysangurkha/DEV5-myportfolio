@@ -40,7 +40,7 @@
 <style scoped>
     video{
         width: 100%;
-        max-height: 100%;
+        height: 100vh;
     }
     .controls{
         position: absolute;
